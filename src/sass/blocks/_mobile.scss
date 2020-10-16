@@ -14,6 +14,7 @@
     }
   }
   .advantages {
+    padding: 35px 0 40px;
     &__wrapper {
       margin-top: 45px;
       flex-direction: column;
@@ -27,6 +28,18 @@
     }
     &__descr {
       margin-top: 12px;
+    }
+  }
+  .consultation {
+    min-height: 565px;
+    padding: 50px 0 46px;
+    &__descr {
+      font-size: 17px;
+    }
+  }
+  .title {
+    &_left {
+      font-size: 27px;
     }
   }
 }
@@ -54,6 +67,24 @@
     }
     &__icons {
       width: 314px;
+    }
+  }
+  .consultation {
+    &__descr {
+      text-align: center;
+    }
+  }
+  .feed-form {
+    align-items: center;
+  }
+  // .button {
+  //   &_submit {
+  //     margin: 0 auto;
+  //   }
+  // }
+  .title {
+    &_left {
+      text-align: center;
     }
   }
 }
