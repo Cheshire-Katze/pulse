@@ -1,3 +1,4 @@
+// для slick
 // $(document).ready(function () {
 //   $('.carousel__inner').slick({
 //     speed: 1200,
@@ -14,8 +15,9 @@
 //       }
 //     ]
 //   });
-// }); для slick
+// }); 
 
+// для tiny-slider
 const slider = tns({
   container: '.carousel__inner',
   items: 1, // кол-во слайдов в карусели одновременно
