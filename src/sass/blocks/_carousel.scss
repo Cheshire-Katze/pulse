@@ -5,8 +5,11 @@
     width: 750px;
     margin: 0 auto;
   }
-  // .slick-prev, .slick-next {  // для slick
-  .prev, .next { // для tiny-slider
+  // для slick
+  .slick-prev,
+  .slick-next {
+    // для tiny-slider
+    // .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -18,15 +21,18 @@
       height: 50px;
     }
   }
-  // .slick-next {  // для slick
-  .next { // для tiny-slider
+  // для slick
+  .slick-next {
+    // для tiny-slider
+    // .next {
     right: -66px;
     left: auto;
   }
-  .tns-item {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
+  // для tiny-slider
+  // .tns-item {
+  //   img {
+  //     display: block;
+  //     margin: 0 auto;
+  //   }
+  // }
 }
