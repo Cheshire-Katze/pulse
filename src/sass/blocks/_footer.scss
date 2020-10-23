@@ -43,6 +43,9 @@
     img {
       height: 27px;
     }
+    &:hover {
+      box-shadow: 0 0 30px rgb(243, 243, 243);
+    }
   }
   &__social {
     display: flex;
