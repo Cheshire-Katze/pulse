@@ -34,6 +34,25 @@ $(document).ready(function () {
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
+
+  // Modal
+//появляется модальное окно при клике на кнопки "заказать звонок" и "Заказать консультацию"
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+
+// нажатие на крестик, закрытие модального окна
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+  
+// при нажатии на кнопку "купить" товар
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    })
+  });
 });
 
 // для tiny-slider
