@@ -82,6 +82,9 @@
       padding: 0 10px;
     }
   }
+  .modal {
+    left: 39%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -139,5 +142,15 @@
     .title {
       font-size: 25px;
     }
+  }
+  .modal {
+    width: 250px;
+    left: 21%;
+    &__close {
+      right: -28px;
+    }
+  }
+  .feed-form-w170 {
+    width: 170px;
   }
 }
