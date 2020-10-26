@@ -36,23 +36,54 @@ $(document).ready(function () {
   toggleSlide('.catalog-item__back');
 
   // Modal
-//появляется модальное окно при клике на кнопки "заказать звонок" и "Заказать консультацию"
-  $('[data-modal=consultation]').on('click', function() {
+  //появляется модальное окно при клике на кнопки "заказать звонок" и "Заказать консультацию"
+  $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
   });
 
-// нажатие на крестик, закрытие модального окна
-  $('.modal__close').on('click', function() {
+  // нажатие на крестик, закрытие модального окна
+  $('.modal__close').on('click', function () {
     $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
   });
-  
-// при нажатии на кнопку "купить" товар
-  $('.button_mini').each(function(i) {
-    $(this).on('click', function() {
+
+  // при нажатии на кнопку "купить" товар
+  $('.button_mini').each(function (i) {
+    $(this).on('click', function () {
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
     })
   });
+
+  function valideForms (form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, введите свое имя",
+          minlength: jQuery.validator.format("Введите {0} символов")
+        },
+        phone: "Пожалуйста, введите свой номер телефона",
+        email: {
+          required: "Пожалуйста, введите свою почту",
+          email: "Неправильно введен адрес почты"
+        }
+      }
+    });
+  };
+
+  valideForms('#consultation-form');
+  valideForms('#consultation form');
+  valideForms('#order form');
 });
 
 // для tiny-slider
