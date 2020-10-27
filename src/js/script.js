@@ -54,7 +54,8 @@ $(document).ready(function () {
     })
   });
 
-  function valideForms (form) {
+  // валидация модальных окон
+  function valideForms(form) {
     $(form).validate({
       rules: {
         name: {
@@ -80,11 +81,53 @@ $(document).ready(function () {
       }
     });
   };
-
   valideForms('#consultation-form');
   valideForms('#consultation form');
   valideForms('#order form');
+
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  // отправка письма с данными, при нажатии на "Заказать звонок" и "Получить консультацию"
+  $('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+
+      // появления модального окна "Спасибо за вашу заявку!"
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+      //...
+      
+      $('form').trigger('reset');
+    });
+    return false;
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // для tiny-slider
 // const slider = tns({
