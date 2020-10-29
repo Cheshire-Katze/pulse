@@ -1,23 +1,22 @@
 {
-  "name": "uber",
+  "name": "pulse",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cheshire-Katze/uber.git"
+    "url": "git+https://github.com/Cheshire-Katze/pulse.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cheshire-Katze/uber/issues"
+    "url": "https://github.com/Cheshire-Katze/pulse/issues"
   },
-  "homepage": "https://github.com/Cheshire-Katze/uber#readme",
+  "homepage": "https://github.com/Cheshire-Katze/pulse#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
@@ -28,5 +27,6 @@
   },
   "dependencies": {
     "tiny-slider": "^2.9.3"
-  }
+  },
+  "description": ""
 }
